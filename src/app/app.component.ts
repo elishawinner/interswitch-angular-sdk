@@ -6,17 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-interswitch';-----___
+  title = 'angular-interswitch';
 
   merchantCode = 'MX';
   payItemID = 'Default_Payable_MX';
-  amount = '20000'; 
-  paymentMode = 'TEST-CENT'; 
+  amount = '20000';
+  paymentMode = 'TEST-CENT';
   customerEmail = 'elisha@test.com';
   customerName = 'Elisha Akan';
-  paymentReference = 'tnt_' + Date.now(); 
+  paymentReference = 'tnt_' + Date.now();
 
-  
+
   paymentCallback(data: any) {
     console.log('[CALLBACK] Payment response:', data);
 
