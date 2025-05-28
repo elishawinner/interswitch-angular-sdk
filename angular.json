@@ -141,7 +141,6 @@
       }
     }
   },
-  "defaultProject": "angular-interswitch",
   "cli": {
     "analytics": "725172a1-88d6-4f6f-b431-dea7c3380269"
   }
