@@ -11,19 +11,20 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
       "ng-interswitch": [
         "dist/ng-interswitch/ng-interswitch",
         "dist/ng-interswitch"
       ]
-    }
+    },
+    "typeRoots": ["node_modules/@types"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+    "strictInjectionParameters": true,
+    "strictTemplates": true,                   // 🔍 Added for better template checks
+    "strictInputAccessModifiers": true         // Optional: Stricter DI checks
+  },
+  "exclude": ["node_modules", "tmp"]
 }
