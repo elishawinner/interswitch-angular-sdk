@@ -144,3 +144,6 @@ https://webpay.interswitchng.com/collections/api/v1/gettransaction.json?merchant
  ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+export NODE_OPTIONS=--openssl-legacy-provider
+ng serve

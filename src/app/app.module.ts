@@ -1,19 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { NgInterswitchModule } from '@interswitchapi/ng-interswitch';
 
 import { AppComponent } from './app.component';
 
-import { NgInterswitchModule } from 'ng-interswitch'
+console.log('[BOOTSTRAP] AppModule initializing...');
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    NgInterswitchModule
+    FormsModule,
+    NgInterswitchModule // No .forRoot() needed
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console.log('[BOOTSTRAP] AppModule constructed');
+  }
+}

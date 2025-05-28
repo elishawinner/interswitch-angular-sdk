@@ -1,11 +1,12 @@
 <ng-interswitch
-  [merchantCode]="'MX26070'"
-  [payItemID]="'Default_Payable_MX26070'"
-  [amount]="'10000'"
-  [transactionReference]="'jdfsd988s89'"
-  [customerEmail]="'johndoe@gmail.com'"
-  [customerName]="'John Doe'"
+  [merchantCode]="merchantCode"
+  [payItemID]="payItemID"
+  [amount]="amount"
+  [paymentMode]="paymentMode"
+  [customerEmail]="customerEmail"
+  [customerName]="customerName"
+  [transactionReference]="paymentReference"
   (paymentCallback)="paymentCallback($event)"
-  [class]="'btn btn-danger'"
-  >Make Payment</ng-interswitch
->
+  class="btn btn-danger">
+  Make Payment
+</ng-interswitch>

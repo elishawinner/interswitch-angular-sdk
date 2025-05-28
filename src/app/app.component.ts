@@ -6,18 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-interswitch';
+  title = 'angular-interswitch';-----___
 
-  paymentOptions = {
-    merchantCode: 'MX26070',
-    payItemID: 'Default_Payable_MX26070',
-    amount: '10000',
-    paymentMode: 'TEST',
-    customerEmail: 'johndoe@nomail.com',
-    customerName: 'John Doe',
-    paymentReference: Date.now().toString()
-  }
-  paymentCallback(data){
-    console.log('data: ', data);
+  merchantCode = 'MX';
+  payItemID = 'Default_Payable_MX';
+  amount = '20000'; 
+  paymentMode = 'TEST-CENT'; 
+  customerEmail = 'elisha@test.com';
+  customerName = 'Elisha Akan';
+  paymentReference = 'tnt_' + Date.now(); 
+
+  
+  paymentCallback(data: any) {
+    console.log('[CALLBACK] Payment response:', data);
+
+    if (data?.transactionStatus === 'FAILED') {
+      console.error('[ERROR] Payment Failed:', data.responseDescription || data.message);
+    } else if (data?.transactionStatus === 'SUCCESS') {
+      console.log('[SUCCESS] Payment completed successfully!');
+    } else {
+      console.warn('[INFO] Payment status unknown:', data);
+    }
   }
 }
